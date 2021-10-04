@@ -30,6 +30,17 @@ namespace TeacherLibrary.Tests
         }
 
         [TestMethod]
+        [DataRow(0)]
+        [DataRow(1)]
+        [DataRow(100)]
+        public void SalaryTest2(int sal)
+        {
+            Teacher teacher = new Teacher("Anders");
+            teacher.Salary = sal;
+            Assert.AreEqual(sal, teacher.Salary);
+        }
+
+        [TestMethod]
         public void NameTest()
         {
             Teacher teacher = new Teacher("Anders");
